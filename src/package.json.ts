@@ -2,12 +2,19 @@ export default
 {
   "name": "pdf-merger-cli",
   "version": "0.0.0",
-  "description": "",
-  "main": "src/index.ts",
+  "description": "This is a CLI PDF merger based on pdf-merger-js which is based on pdfjs without any external dependencies.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zorji/pdf-merger-cli"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "pdf-merger-cli": "bin/pdf-merger-cli"
+  },
   "scripts": {
     "prebuild": "bash ./scripts/prebuild.sh",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts",
     "format": "prettier --write 'src/**/*.ts'"
   },
   "author": "",
